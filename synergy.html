@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Synergy</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/syntech-logo.ico.ico" type="image/x-icon" />
+    <!-- Stylesheets-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      html.ie-10 .ie-panel,
+      html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/"
+        ><img
+          src="images/ie8-panel/warning_bar_0000_us.jpg"
+          height="42"
+          width="820"
+          alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
+      /></a>
+    </div>
+    <!-- <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div> -->
+    <div class="page">
+      <div id="synergy">
+        <!-- Page Header-->
+        <header class="section page-header" >
+          <!-- RD Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav
+              class="rd-navbar rd-navbar-classic"
+              data-layout="rd-navbar-fixed"
+              data-sm-layout="rd-navbar-fixed"
+              data-md-layout="rd-navbar-fixed"
+              data-md-device-layout="rd-navbar-fixed"
+              data-lg-layout="rd-navbar-static"
+              data-lg-device-layout="rd-navbar-fixed"
+              data-xl-layout="rd-navbar-static"
+              data-xl-device-layout="rd-navbar-static"
+              data-xxl-layout="rd-navbar-static"
+              data-xxl-device-layout="rd-navbar-static"
+              data-lg-stick-up-offset="46px"
+              data-xl-stick-up-offset="46px"
+              data-xxl-stick-up-offset="46px"
+              data-lg-stick-up="true"
+              data-xl-stick-up="true"
+              data-xxl-stick-up="true"
+            >
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button
+                      class="rd-navbar-toggle"
+                      data-rd-navbar-toggle=".rd-navbar-nav-wrap"
+                    >
+                      <span></span>
+                    </button>
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand">
+                      <a class="brand" href="index.html"
+                        ><img
+                          src="images/syn-logo.png"
+                          alt=""
+                          width="223"
+                          height="50"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <!-- RD Navbar Share-->
+                      <div
+                        class="rd-navbar-share fl-bigmug-line-share27"
+                        data-rd-navbar-toggle=".rd-navbar-share-list"
+                      >
+                        <ul class="list-inline rd-navbar-share-list">
+                          <li class="rd-navbar-share-list-item">
+                            <a class="icon fa fa-facebook" href="#"></a>
+                          </li>
+                          <li class="rd-navbar-share-list-item">
+                            <a class="icon fa fa-twitter" href="#"></a>
+                          </li>
+                          <li class="rd-navbar-share-list-item">
+                            <a class="icon fa fa-google-plus" href="#"></a>
+                          </li>
+                          <li class="rd-navbar-share-list-item">
+                            <a class="icon fa fa-instagram" href="#"></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="rd-nav-item active">
+                          <a class="rd-nav-link" href="#synergy">Synergy</a>
+                        </li>
+                        
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link" href="about.html">Team</a>
+                        </li>
+                        
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link" href="#contacts">Contact Us</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+    <!-- Cta-->
+    <section class="section section-fluid bg-default">
+      <div class="parallax-container" data-parallax-img="images/parallax-syn.png">
+        <div
+          class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay"
+        >
+          <div class="container">
+            <div class="row row-30 justify-content-end text-right">
+              <div class="col-sm-7">
+                <h3 class="wow fadeInLeft">
+                  Revolutionize teamwork with our App!
+                </h3>
+                <p>
+                  Where collaboration meets innovation. Let's build your next great project together!
+                </p>
+                <div class="group-sm group-middle group justify-content-end">
+                <a class="button button-white-outline button-ujarak" href="#" onclick="showPopup()"
+                    >DOWNLOAD NOW</a
+                  >
+                </div>
+
+                <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+
+                <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
+                  <p style="color: black; text-align: left;">Synergy is still under development! Check back soon! </p>
+                  <button onclick="hidePopup()">Close</button>
+                </div>
+                
+                <script>
+                  function showPopup() {
+                    document.getElementById('overlay').style.display = 'block';
+                    document.getElementById('popup').style.display = 'block';
+                  }
+                
+                  function hidePopup() {
+                    document.getElementById('overlay').style.display = 'none';
+                    document.getElementById('popup').style.display = 'none';
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Projects-->
+    <section
+      class="section section-sm section-fluid bg-default text-center"
+      id="projects"
+    >
+      <div class="container-fluid">
+        <h2 class="wow fadeInLeft">What is Synergy?</h2>
+        <p class="quote-jean wow fadeInRight" data-wow-delay=".1s">
+          Synergy is a comprehensive <b>collaborative digital workspace</b>, for efficient teamwork through
+seamless content creation and sharing of a variety of files like text, presentations, documents, images, videos, and
+notes. The platform caters to a diverse user base, including students, vocational educators as well as advertising and marketing firms. Users can generate, modify, annotate, share a wide range of creative content and create <b>dedicated teams called Syncs</b>.
+        </p>
+      </br>
+        <div class="isotope-filters isotope-filters-horizontal">
+          <button
+            class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha"
+            data-custom-toggle="#isotope-3"
+            data-custom-toggle-hide-on-blur="true"
+            data-custom-toggle-disable-on-blur="true"
+          >
+            <span class="icon fa fa-caret-down"></span>Filter
+          </button>
+          <ul class="isotope-filters-list" id="isotope-3">
+            <li>
+              <a
+                class="active"
+                href="#"
+                data-isotope-filter="*"
+                data-isotope-group="gallery"
+                >All Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                data-isotope-filter="Type 1"
+                data-isotope-group="gallery"
+                >Tools</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                data-isotope-filter="Type 2"
+                data-isotope-group="gallery"
+                >Syncs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                data-isotope-filter="Type 3"
+                data-isotope-group="gallery"
+                >Project Management</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                data-isotope-filter="Type 4"
+                data-isotope-group="gallery"
+                >Events</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="row row-30 isotope"
+          data-isotope-layout="fitRows"
+          data-isotope-group="gallery"
+          data-lightgallery="group"
+        >
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
+            data-filter="Type 1"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/WHITEBOARD.jpg"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-1-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-1-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a>Whiteboard Tool</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  A digital canvas for real-time collaboration and planning. Accessible in and out of meetings, it enhances teamwork by enabling participants to share and interact visually.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
+            data-filter="Type 1"
+            data-wow-delay=".1s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/BRAINSTORM.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-2-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-2-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Brainstorming Tool</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  This tool allows a collage-style view of ideas, along with options for idea priority.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
+            data-filter="Type 3"
+            data-wow-delay=".2s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/todo.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-3-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-3-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >To-Do Lists</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  A simple yet effective tool for organizing tasks and priorities. You can keep track of what needs to be done, whether it’s in a sync or for personal projects.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
+            data-filter="Type 4"
+            data-wow-delay=".3s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/event.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-4-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-4-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Events</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  A virtual workspace to host events in and out of your teams, and a calendar to keep track of your events.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
+            data-filter="Type 1"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/presentation.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-5-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-5-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Presentation Tool</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  A visual tool to communicate ideas and explain concepts effectively, with elements to allow intercation with the audience.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
+            data-filter="Type 1"
+            data-wow-delay=".1s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/DOCUMENT.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-6-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-6-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Document Tool</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  A tool to create, share, edit and collaborate on text-based files in real time.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
+            data-filter="Type 2"
+            data-wow-delay=".2s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/communicate.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-7-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-7-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Communicate</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  Video and audio calls enable real-time, face-to-face interaction, while the chat feature supports text-based communication, file sharing, and asynchronous collaboration.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div
+            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
+            data-filter="Type 2"
+            data-wow-delay=".3s"
+          >
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-classic thumbnail-md">
+              <div class="thumbnail-classic-figure">
+                <img
+                  src="images/syncs.png"
+                  alt=""
+                  width="420"
+                  height="350"
+                />
+              </div>
+              <div class="thumbnail-classic-caption">
+                <div class="thumbnail-classic-title-wrap">
+                  <a
+                    class="icon fl-bigmug-line-zoom60"
+                    href="images/grid-gallery-8-1200x800-original.jpg"
+                    data-lightgallery="item"
+                    ><img
+                      src="images/fullwidth-gallery-8-420x350.jpg"
+                      alt=""
+                      width="420"
+                      height="350"
+                  /></a>
+                  <h5 class="thumbnail-classic-title">
+                    <a >Syncs</a>
+                  </h5>
+                </div>
+                <p class="thumbnail-classic-text">
+                  Each team is a ‘Sync’, where members collaborate, create, and edit content and brainstorm ideas using a number of tools.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- You dream — we embody-->
+    <section class="section section-sm bg-default text-md-left">
+      <div class="container">
+        <div
+          class="row row-50 align-items-center justify-content-center justify-content-xl-between"
+        >
+          <div class="col-lg-6 col-xl-5 wow fadeInLeft">
+            <h2>Get More With Us</h2>
+            <!-- Bootstrap tabs-->
+            <div
+              class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left"
+              id="tabs-6"
+            >
+              <!-- Nav tabs-->
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link nav-link-big active"
+                    href="#tabs-6-1"
+                    data-toggle="tab"
+                    >01</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link nav-link-big"
+                    href="#tabs-6-2"
+                    data-toggle="tab"
+                    >02</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link nav-link-big"
+                    href="#tabs-6-3"
+                    data-toggle="tab"
+                    >03</a
+                  >
+                </li>
+                
+              </ul>
+              <!-- Tab panes-->
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tabs-6-1">
+                  <h5 class="font-weight-normal">TOOL INTEGRATION</h5>
+                  <p>
+                    The tools in Synergy operate seamlessly together to enhance user experience and productivity. This allows for effortless transfer of data from one tool to another, providing users with a cohesive and streamlined workflow.
+                  </p>
+                  
+                </div>
+                <div class="tab-pane fade" id="tabs-6-2">
+                  <h5 class="font-weight-normal">HOST ENGAGING EVENTS</h5>
+                  <p>
+                    
+Synergy offers an engaging workspace for events that goes beyond just collaboration. With features like gamification and immersive environments, it transforms virtual meetings into memorable experiences, making them a preferred choice rather than a last resort.
+                  </p>
+                  
+                </div>
+                <div class="tab-pane fade" id="tabs-6-3">
+                  <h5 class="font-weight-normal">PLATFORM INTEROPERABILITY</h5>
+                  <p>
+                    Synergy is available across all platforms, including all common web browsers (Google Chrome, Mozilla
+                    Firefox, Apple Safari, and Microsoft Edge) and on Android and IOS.
+                  </p>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+            <div
+              class="owl-carousel owl-style-1"
+              data-items="2"
+              data-stage-padding="0"
+              data-loop="true"
+              data-margin="0"
+              data-mouse-drag="true"
+              data-autoplay="true"
+            >
+              <a class="box-device" 
+                ><img
+                  src="images/laptop.png"
+                  alt=""
+                  width="313"
+                  height="580" /></a
+              ><a class="box-device" 
+                ><img
+                  src="images/phone-screen.png"
+                  alt=""
+                  width="313"
+                  height="580" /></a
+              ><a class="box-device" 
+                ><img
+                  src="images/ipad.png"
+                  alt=""
+                  width="313"
+                  height="580" /></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing-->
+    <section
+    class="section section-sm section-bottom-70 section-fluid bg-default"
+  >
+    <div class="container">
+      <h2>User Types</h2>
+      <p>Aside from our general usage, Synergy caters the interface and tools </br>
+    available to the type of user on the platform...</p>
+      <div class="row row-30 justify-content-center">
+        <div class="col-md-6 col-lg-5 col-xl-4">
+          <div class="box-pricing box-pricing-black">
+            <div class="box-pricing-body">
+              <img
+                  src="images/teacher-icon.png"
+                  alt=""
+                  width="96"
+                  height="96"/>
+              <h4 class="box-pricing-title">Vocational Educators</h4>
+              <div class="box-pricing-divider">
+                <div class="divider"></div>
+              </div>
+              <ul class="box-pricing-list">
+                <li class="active">Whiteboard Tool</li>
+                <li class="active">Group Moderation</li>
+                <li class="active">Presentation Tool</li>
+              </ul>
+            </div>
+            <div class="box-pricing-button">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-xl-4">
+          <div class="box-pricing box-pricing-black">
+            <div class="box-pricing-body">
+              <img
+                  src="images/student-icon1.png"
+                  alt=""
+                  width="100"
+                  height="100"/>
+              <h4 class="box-pricing-title">Students</h4>
+              <div class="box-pricing-divider">
+                <div class="divider"></div>
+              </div>
+              <ul class="box-pricing-list">
+                <li class="active">Whiteboard Tool</li>
+                <li class="active">Document Tool</li>
+                <li class="active">Brainstorming Tool</li>
+                
+              </ul>
+            </div>
+            <div class="box-pricing-button">
+            </br>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-xl-4">
+          <div class="box-pricing box-pricing-black">
+            <div class="box-pricing-body">
+              <img
+                  src="images/marketing-icon.png"
+                  alt=""
+                  width="96"
+                  height="96"/>
+                  <h4 class="box-pricing-title">Marketing Professionals</h4>
+              <!--<h3 class="box-pricing-price">Marketing Professionals</h3>-->
+              <div class="box-pricing-divider">
+                <div class="divider"></div>
+              </div>
+              <ul class="box-pricing-list">
+                <li class="active">Whiteboard Tool</li>
+                <li class="active">Brainstorming Tool</li>
+                <li class="active">Presentation Tool</li>
+              </ul>
+            </div>
+            <div class="box-pricing-button">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Page Footer-->
+<footer class="section section-fluid footer-minimal context-dark">
+  <div class="bg-gray-15">
+    <div class="container-fluid">
+      <div class="footer-minimal-bottom-panel text-sm-left">
+        <div class="row row-10 align-items-md-center">
+          <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+            <div>
+              <ul class="list-inline list-inline-sm footer-social-list-2">
+                <li><a class="icon fa fa-facebook" href="#"></a></li>
+                <li><a class="icon fa fa-twitter" href="#"></a></li>
+                <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                <li><a class="icon fa fa-instagram" href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 order-sm-first">
+            <!-- Rights-->
+            <p class="rights">
+              <span>&copy;&nbsp;</span
+              ><span class="copyright-year"></span> <span>Syntech</span>
+            </p>
+          </div>
+          <div class="col-sm-6 col-md-4 text-md-right">
+            <span> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+
+</html>
