@@ -34,7 +34,46 @@
       html.lt-ie-10 .ie-panel {
         display: block;
       }
+
+      
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var tabs = document.querySelectorAll('.nav-tabs .nav-link');
+        var tabContent = document.querySelectorAll('.tab-content .tab-pane');
+      
+        var currentIndex = 0;
+      
+        function switchTab(index) {
+          tabContent.forEach(tab => tab.classList.remove('show', 'active'));
+          tabs.forEach(tab => tab.classList.remove('active'));
+      
+          currentIndex = index;
+      
+          tabContent[currentIndex].classList.add('show', 'active');
+          tabs[currentIndex].classList.add('active');
+        }
+      
+        var intervalId = setInterval(function () {
+          currentIndex = (currentIndex + 1) % tabs.length;
+          switchTab(currentIndex);
+        }, 4000);
+      
+        tabs.forEach(function (tab, index) {
+          tab.addEventListener('mouseover', function () {
+            clearInterval(intervalId);
+            switchTab(index);
+          });
+      
+          tab.addEventListener('mouseout', function () {
+            intervalId = setInterval(function () {
+              currentIndex = (currentIndex + 1) % tabs.length;
+              switchTab(currentIndex);
+            }, 3000);
+          });
+        });
+      });
+      </script>
   </head>
   <body>
     <div class="ie-panel">
@@ -46,13 +85,6 @@
           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
       /></a>
     </div>
-    <!-- <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </div> -->
     <div class="page">
       <div id="synergy">
         <!-- Page Header-->
@@ -118,6 +150,13 @@
                         <li class="rd-nav-item">
                           <a class="rd-nav-link" href="#contacts">Contact Us</a>
                         </li>
+                        
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link" href="https://twitter.com/syntechsolution?s=03" target="_blank"><b class="fab fa-twitter" ></b></a>
+                        </li>
+                        <li class="rd-nav-item">
+                          <a class="rd-nav-link" href="https://www.instagram.com/syntech._.solutions?igsh=eXp1ZjViYXMyeGto" target="_blank"><b class="fab fa-instagram" ></b></a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -142,7 +181,7 @@
                   Where collaboration meets innovation. Let's build your next great project together!
                 </p>
                 <div class="group-sm group-middle group justify-content-end">
-                <a class="button button-white-outline button-ujarak" href="mailto:synergy.syntech@gmail.com" onclick="showPopup()"
+                <a class="button button-white-outline button-ujarak"  onclick="showPopup()"
                     >DOWNLOAD NOW</a
                   >
                 </div>
@@ -151,6 +190,7 @@
 
                 <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
                   <p style="color: black; text-align: left;">Synergy is still under development! Check back soon! </p>
+                  
                   <button onclick="hidePopup()">Close</button>
                 </div>
                 
@@ -172,6 +212,7 @@
       </div>
     </section>
 
+    
     <!-- Latest Projects-->
     <section
       class="section section-sm section-fluid bg-default text-center"
@@ -185,366 +226,7 @@ seamless content creation and sharing of a variety of files like text, presentat
 notes. The platform caters to a diverse user base, including students, vocational educators as well as advertising and marketing firms. Users can generate, modify, annotate, share a wide range of creative content and create <b>dedicated teams called Syncs</b>.
         </p>
       </br>
-        <div class="isotope-filters isotope-filters-horizontal">
-          <button
-            class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha"
-            data-custom-toggle="#isotope-3"
-            data-custom-toggle-hide-on-blur="true"
-            data-custom-toggle-disable-on-blur="true"
-          >
-            <span class="icon fa fa-caret-down"></span>Filter
-          </button>
-          <ul class="isotope-filters-list" id="isotope-3">
-            <li>
-              <a
-                class="active"
-                href="#"
-                data-isotope-filter="*"
-                data-isotope-group="gallery"
-                >All Features</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                data-isotope-filter="Type 1"
-                data-isotope-group="gallery"
-                >Tools</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                data-isotope-filter="Type 2"
-                data-isotope-group="gallery"
-                >Syncs</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                data-isotope-filter="Type 3"
-                data-isotope-group="gallery"
-                >Project Management</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                data-isotope-filter="Type 4"
-                data-isotope-group="gallery"
-                >Events</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div
-          class="row row-30 isotope"
-          data-isotope-layout="fitRows"
-          data-isotope-group="gallery"
-          data-lightgallery="group"
-        >
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
-            data-filter="Type 1"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/WHITEBOARD.jpg"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-1-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-1-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a>Whiteboard Tool</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  A digital canvas for real-time collaboration and planning. Accessible in and out of meetings, it enhances teamwork by enabling participants to share and interact visually.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
-            data-filter="Type 1"
-            data-wow-delay=".1s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/BRAINSTORM.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-2-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-2-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Brainstorming Tool</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  This tool allows a collage-style view of ideas, along with options for idea priority.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
-            data-filter="Type 3"
-            data-wow-delay=".2s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/todo.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-3-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-3-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >To-Do Lists</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  A simple yet effective tool for organizing tasks and priorities. You can keep track of what needs to be done, whether it’s in a sync or for personal projects.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight"
-            data-filter="Type 4"
-            data-wow-delay=".3s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/event.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-4-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-4-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Events</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  A virtual workspace to host events in and out of your teams, and a calendar to keep track of your events.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
-            data-filter="Type 1"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/presentation.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-5-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-5-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Presentation Tool</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  A visual tool to communicate ideas and explain concepts effectively, with elements to allow intercation with the audience.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
-            data-filter="Type 1"
-            data-wow-delay=".1s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/DOCUMENT.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-6-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-6-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Document Tool</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  A tool to create, share, edit and collaborate on text-based files in real time.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
-            data-filter="Type 2"
-            data-wow-delay=".2s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/communicate.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-7-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-7-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Communicate</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  Video and audio calls enable real-time, face-to-face interaction, while the chat feature supports text-based communication, file sharing, and asynchronous collaboration.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div
-            class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInLeft"
-            data-filter="Type 2"
-            data-wow-delay=".3s"
-          >
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-classic thumbnail-md">
-              <div class="thumbnail-classic-figure">
-                <img
-                  src="images/syncs.png"
-                  alt=""
-                  width="420"
-                  height="350"
-                />
-              </div>
-              <div class="thumbnail-classic-caption">
-                <div class="thumbnail-classic-title-wrap">
-                  <a
-                    class="icon fl-bigmug-line-zoom60"
-                    href="images/grid-gallery-8-1200x800-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/fullwidth-gallery-8-420x350.jpg"
-                      alt=""
-                      width="420"
-                      height="350"
-                  /></a>
-                  <h5 class="thumbnail-classic-title">
-                    <a >Syncs</a>
-                  </h5>
-                </div>
-                <p class="thumbnail-classic-text">
-                  Each team is a ‘Sync’, where members collaborate, create, and edit content and brainstorm ideas using a number of tools.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <!-- You dream — we embody-->
+      <!-- You dream — we embody-->
     <section class="section section-sm bg-default text-md-left">
       <div class="container">
         <div
@@ -588,14 +270,14 @@ notes. The platform caters to a diverse user base, including students, vocationa
               <!-- Tab panes-->
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="tabs-6-1">
-                  <h5 class="font-weight-normal">TOOL INTEGRATION</h5>
+                  <h5 class="font-weight-normal"><b> TOOL INTEGRATION </b></h5>
                   <p>
                     The tools in Synergy operate seamlessly together to enhance user experience and productivity. This allows for effortless transfer of data from one tool to another, providing users with a cohesive and streamlined workflow.
                   </p>
                   
                 </div>
                 <div class="tab-pane fade" id="tabs-6-2">
-                  <h5 class="font-weight-normal">HOST ENGAGING EVENTS</h5>
+                  <h5 class="font-weight-normal"><b>HOST ENGAGING EVENTS</b></h5>
                   <p>
                     
 Synergy offers an engaging workspace for events that goes beyond just collaboration. With features like gamification and immersive environments, it transforms virtual meetings into memorable experiences, making them a preferred choice rather than a last resort.
@@ -603,7 +285,7 @@ Synergy offers an engaging workspace for events that goes beyond just collaborat
                   
                 </div>
                 <div class="tab-pane fade" id="tabs-6-3">
-                  <h5 class="font-weight-normal">PLATFORM INTEROPERABILITY</h5>
+                  <h5 class="font-weight-normal"> <b>PLATFORM INTEROPERABILITY </b></h5>
                   <p>
                     Synergy is available across all platforms, including all common web browsers (Google Chrome, Mozilla
                     Firefox, Apple Safari, and Microsoft Edge) and on Android and IOS.
@@ -649,14 +331,159 @@ Synergy offers an engaging workspace for events that goes beyond just collaborat
       </div>
     </section>
 
+      <div class="isotope-filters isotope-filters-horizontal">
+        <button
+          class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha"
+          data-custom-toggle="#isotope-3"
+          data-custom-toggle-hide-on-blur="true"
+          data-custom-toggle-disable-on-blur="true"
+        >
+          <span class="icon fa fa-caret-down"></span>Filter
+        </button>
+        <ul class="isotope-filters-list" id="isotope-3">
+          <li>
+            <a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">All Features</a>
+          </li>
+          <li>
+            <a href="#" data-isotope-filter="Type 1" data-isotope-group="gallery">Tools</a>
+          </li>
+          <li>
+            <a href="#" data-isotope-filter="Type 2" data-isotope-group="gallery">Project Management</a>
+          </li>
+          <li>
+            <a href="#" data-isotope-filter="Type 3" data-isotope-group="gallery">Events</a>
+          </li>
+          <li>
+            <a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">Groups</a>
+          </li>
+          <!-- Add similar list items for other types -->
+        </ul>
+      </div>
+      
+      <div class="row isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group" style="width: 100%;">
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 1" style="width: 100%;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/WHITEBOARD.jpg" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Whiteboard tool</h2>
+              <p style="margin: 0; text-align: left;">A digital canvas for real-time collaboration and planning. Accessible in and out of meetings, it enhances teamwork by enabling participants to share and interact visually.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+        <!-- Add similar isotope-item divs for other items -->
+      
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 2" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/todo.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">To-Do Lists</h2>
+              <p style="margin: 0; text-align: left;">A simple yet effective tool for organizing tasks and priorities. You can keep track of what needs to be done, whether it’s in a sync or for personal projects.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 1" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/BRAINSTORM.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Brainstorming Tool</h2>
+              <p style="margin: 0; text-align: left;">This tool allows a collage-style view of ideas, along with options for idea priority.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 3" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/event.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Events</h2>
+              <p style="margin: 0; text-align: left;">A virtual workspace to host events in and out of your teams, and a calendar to keep track of your events.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 1" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/presentation.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Presentation Tool</h2>
+              <p style="margin: 0; text-align: left;">A visual tool to communicate ideas and explain concepts effectively, with elements to allow intercation with the audience.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 1" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/DOCUMENT.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Document Tool</h2>
+              <p style="margin: 0; text-align: left;">A tool to create, share, edit and collaborate on text-based files in real time.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 4" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%;  display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/communicate.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <h2 style="margin: 0; font-size: 1.5em; text-align: left;">Communicate</h2>
+              <p style="margin: 0; text-align: left;">Video and audio calls enable real-time, face-to-face interaction, while the chat feature supports text-based communication, file sharing, and asynchronous collaboration.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+        <div class="col-12 isotope-item wow fadeInRight" data-filter="Type 4" style="width: 100%; margin-top: 20px;">
+          <!-- Your Content with Shadowed Div -->
+          <div style="width: 60%; margin: 0 auto; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 2%; padding-bottom: 2%; padding-right: 2%; display: flex; align-items: center;">
+            <div style="float: left; width: 30%; position: relative;">
+              <img src="images/syncs.png" alt="Your Image Alt Text" style="width: 60%; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div style="float: right; width: 70%; padding-left: 20px; text-align: left;">
+              <h2 style="margin: 0; font-size: 1.5em;">Syncs</h2>
+              <p style="margin: 0; text-align: left;">Each team is a ‘Sync’, where members collaborate, create, and edit content and brainstorm ideas using a number of tools.</p>
+            </div>
+          </div>
+          <!-- End of your Content -->
+        </div>
+
+      </div>
+
     <!-- Pricing-->
     <section
     class="section section-sm section-bottom-70 section-fluid bg-default"
   >
     <div class="container">
       <h2>User Types</h2>
-      <p>Aside from our general usage, Synergy caters the interface and tools </br>
-    available to the type of user on the platform...</p>
+      <p>Aside from general usage, Synergy caters the interface and tools </br>
+    available to the type of user on the platform:</p>
       <div class="row row-30 justify-content-center">
         <div class="col-md-6 col-lg-5 col-xl-4">
           <div class="box-pricing box-pricing-black">
@@ -733,8 +560,9 @@ Synergy offers an engaging workspace for events that goes beyond just collaborat
       </div>
     </div>
   </section>
+</section>
 
-    <!-- Page Footer-->
+<!-- Page Footer-->
 <footer class="section section-fluid footer-minimal context-dark">
   <div class="bg-gray-15">
     <div class="container-fluid">
@@ -770,5 +598,4 @@ Synergy offers an engaging workspace for events that goes beyond just collaborat
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
-
 </html>
