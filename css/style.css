@@ -21163,6 +21163,7 @@ disabled look for disabled choices in the results dropdown
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
   }
   .imagy {
     height: 100%;
@@ -21200,10 +21201,14 @@ disabled look for disabled choices in the results dropdown
     padding-left: 20px;
   }
 
-  .imagy{
-    float: left; 
-    width: 30%; 
+  .imagy {
+    float: left;
+    width: 30%;
     position: relative;
+  }
+
+  .picky {
+    width: 60%;
   }
 }
 
