@@ -21128,6 +21128,10 @@ disabled look for disabled choices in the results dropdown
   .modal-content {
     margin: 15px 0;
   }
+  .isotope-item {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .modal-header {
@@ -21153,4 +21157,57 @@ disabled look for disabled choices in the results dropdown
 
 .modal-body {
   padding: 29px 30px 35px;
+}
+@media (max-width: 992px) {
+  .picky {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .imagy {
+    height: 100%;
+    width: 100%;
+  }
+  .normally {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .innerdiv {
+    padding-left: 0px;
+  }
+
+  .heady {
+    text-align: center;
+  }
+
+  .texty {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .heady {
+    text-align: left;
+  }
+
+  .texty {
+    text-align: left;
+  }
+
+  .innerdiv {
+    padding-left: 20px;
+  }
+
+  .imagy{
+    float: left; 
+    width: 30%; 
+    position: relative;
+  }
+}
+
+.bigboi {
+  display: flex;
+  flex-direction: column;
 }
