@@ -21161,7 +21161,7 @@ disabled look for disabled choices in the results dropdown
 
 @media (min-width: 0px) and (max-width: 450px) {
   .texty {
-    text-align: justify;
+    text-align: left;
   }
   .normally {
     margin-top: 10px;
@@ -21173,13 +21173,16 @@ disabled look for disabled choices in the results dropdown
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 5%;
   }
   .innerdiv {
     padding-left: 0px;
   }
 
   .heady {
-    text-align: center;
+    text-align: left;
+    margin-top: 5px;
   }
   .viddiv {
     width: 100%;
@@ -21224,6 +21227,9 @@ disabled look for disabled choices in the results dropdown
   .vid {
     display: none;
   }
+  .picky {
+    padding-bottom: 4%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -21254,6 +21260,10 @@ disabled look for disabled choices in the results dropdown
 
   .chead {
     display: none;
+  }
+
+  .picky {
+    padding-bottom: 2%;
   }
 }
 
