@@ -21181,8 +21181,11 @@ disabled look for disabled choices in the results dropdown
   .heady {
     text-align: center;
   }
-  .viddiv{
-    width: 100%
+  .viddiv {
+    width: 100%;
+  }
+  .vid {
+    display: none;
   }
 }
 
@@ -21214,8 +21217,12 @@ disabled look for disabled choices in the results dropdown
     text-align: center;
     margin-bottom: 5px;
   }
-  .viddiv{
-    width: 80%
+  .viddiv {
+    width: 80%;
+  }
+
+  .vid {
+    display: none;
   }
 }
 
@@ -21241,8 +21248,12 @@ disabled look for disabled choices in the results dropdown
   .picky {
     width: 60%;
   }
-  .viddiv{
-    width: 60%
+  .viddiv {
+    width: 60%;
+  }
+
+  .chead {
+    display: none;
   }
 }
 
